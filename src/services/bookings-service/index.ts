@@ -19,9 +19,8 @@ async function postBooking(userId: number, roomId: number) {
   if (!data || !data.Ticket[0]) throw forbiddenError();
 
   const ticket = data.Ticket[0];
-  if (ticket.status !== 'PAID' || ticket.TicketType.isRemote || !ticket.TicketType.includesHotel) {
+  if (ticket.status !== 'PAID' || ticket.TicketType.isRemote || !ticket.TicketType.includesHotel)
     throw forbiddenError();
-  }
 
   await checkIfRoomIsAvailable(roomId);
 
