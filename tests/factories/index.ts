@@ -5,4 +5,4 @@ export * from './enrollments-factory';
 export * from './tickets-factory';
 export * from './payments-factory';
 export * from './hotels-factory';
-export * from './bookings-factory';
+export * from './booking-factory';

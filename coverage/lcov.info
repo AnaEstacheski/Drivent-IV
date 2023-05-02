@@ -120,7 +120,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src/controllers/bookings-controller.ts
+SF:src/controllers/booking-controller.ts
 FN:6,getBookings
 FN:15,postBooking
 FN:26,updateBooking
@@ -622,7 +622,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src/repositories/bookings-repository/index.ts
+SF:src/repositories/booking-repository/index.ts
 FN:3,findBookings
 FN:13,createBooking
 FN:19,findRoomById
@@ -803,7 +803,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src/routers/bookings-router.ts
+SF:src/routers/booking-router.ts
 FNF:0
 FNH:0
 DA:1,11
@@ -1081,7 +1081,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:src/services/bookings-service/index.ts
+SF:src/services/booking-service/index.ts
 FN:5,findBookings
 FN:11,checkIfRoomIsAvailable
 FN:17,postBooking

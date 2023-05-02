@@ -1,5 +1,5 @@
 import { notFoundError, forbiddenError } from '@/errors';
-import bookingRepository from '@/repositories/bookings-repository';
+import bookingRepository from '@/repositories/booking-repository';
 import enrollmentRepository from '@/repositories/enrollment-repository';
 
 async function findBookings(userId: number) {
@@ -39,10 +39,10 @@ async function updateBooking(userId: number, bookingId: number, roomId: number) 
   return updatedBooking;
 }
 
-const bookingsService = {
+const bookingService = {
   findBookings,
   postBooking,
   updateBooking,
 };
 
-export default bookingsService;
+export default bookingService;

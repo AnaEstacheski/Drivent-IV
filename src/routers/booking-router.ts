@@ -2,12 +2,12 @@ import { Router } from 'express';
 import { getBookings, postBooking, updateBooking } from '@/controllers';
 import { authenticateToken } from '@/middlewares';
 
-const bookingsRouter = Router();
+const bookingRouter = Router();
 
-bookingsRouter
+bookingRouter
   .all('/*', authenticateToken)
   .get('/', getBookings)
   .post('/', postBooking)
   .put('/:bookingId', updateBooking);
 
-export { bookingsRouter };
+export { bookingRouter };
