@@ -23,12 +23,18 @@ async function findRoomById(roomId: number) {
   });
 }
 
-// async function updateBooking() {}
+async function updateBooking(bookingId: number, roomId: number) {
+  return prisma.booking.update({
+    where: { id: bookingId },
+    data: { roomId },
+  });
+}
 
 const bookingRepository = {
   findBookings,
   createBooking,
   findRoomById,
+  updateBooking,
 };
 
 export default bookingRepository;
