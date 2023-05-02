@@ -1,19 +1,22 @@
-/* import bookingRepository from '@/repositories/bookings-repository';
+import { notFoundError } from '@/errors';
+import bookingRepository from '@/repositories/bookings-repository';
 
-async function findBookings() {
+async function findBookings(userId: number) {
+  const booking = await bookingRepository.findBookings(userId);
+  if (!booking) throw notFoundError();
+  return booking;
 }
 
-async function createBooking() {
+/* async function createBooking() {
 }
 
 async function updateBooking() {
-}
+} */
 
 const bookingsService = {
   findBookings,
-  createBooking,
-  updateBooking,
+  /*   createBooking,
+  updateBooking, */
 };
 
 export default bookingsService;
- */
